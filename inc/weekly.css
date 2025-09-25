@@ -1,5 +1,26 @@
 body {
-    background: orange;
+    background-color: grey;
+    background-image: url("weekly_logo.png");
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: bottom right;
+    text-align: center;
+}
+
+div {
+    background-color: rgba(250, 230, 190, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #569;
+    margin: 10px;
+}
+
+.title {
+    font-family: monospace;
+    font-size: xx-large;
+    text-align: center;
+    width: 75%;
+    margin: 10px auto;
 }
 
 .logo {
