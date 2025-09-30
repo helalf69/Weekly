@@ -1,9 +1,13 @@
 body {
-    background-color: grey;
+    background: grey;
+    position: relative;
+/*
+    transition: background 5s ease;
     background-image: url("weekly_logo.png");
     background-repeat: no-repeat;
     background-size: 20%;
     background-position: bottom right;
+*/
     text-align: center;
 }
 
@@ -15,19 +19,44 @@ div {
     margin: 10px;
 }
 
+#bg  { 
+    background: grey;
+    padding: 0px;
+    border-radius: 0px;
+    border: 0px solid #569;
+    margin: 0px;
+    position: fixed; 
+    inset: 0; 
+    pointer-events: none;     /* overlay */
+    opacity: 0; 
+    transition: opacity 5s ease; 
+    z-index: 0; 
+}
+  
+#content { 
+    position: relative; 
+    z-index: 1; 
+    padding: 0px;
+    border-radius: 0px;
+    border: 0px solid #569;
+    margin: 0px;
+    background-color: rgba(250, 230, 190, 0);
+}  
+
 .title {
     font-family: monospace;
     font-size: xx-large;
     text-align: center;
     width: 75%;
-    margin: 10px auto;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .logo {
   position: fixed;      /* stays put when scrolling */
   bottom: 10px;         /* distance from bottom */
   right: 10px;          /* distance from right */
-  width: 500px;         /* adjust size */
+  width: 50%;         /* adjust size */
   /* opacity: 0.2;          optional, make it watermark-like */
   z-index: -1;          /* put behind other elements */
   pointer-events: none; /* so it won't block clicks */
