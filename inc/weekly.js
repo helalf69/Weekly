@@ -63,8 +63,26 @@ function fadeBackground() {
 
   // Let layout settle, then fade overlay to 1 (visible)
   requestAnimationFrame(() => { bg.style.opacity = 1; });
+
+  setTimeout(() => {
+    document.getElementById('ops').style.visibility = 'hidden';
+  }, 10000);
+
 }
 
+function fullWeek() {
+  // alert("test");
+  const days = ["mo","tu","we","th","fr","sa","su"];
+
+  days.forEach(dayId => {
+    const el = document.getElementById(dayId);
+    if (el) {
+      // Do your checks here
+      if (el.checked == true) el.checked = false; // example
+      else if (el.checked == false) el.checked = true;
+    }
+  }); 
+}
 /*
 const monthColor2 = [
   "#9A2A2A", // January – Garnet (deep red)

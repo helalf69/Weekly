@@ -11,7 +11,7 @@ body {
     text-align: center;
 }
 
-div {
+div, .login {
     background-color: rgba(250, 230, 190, 0.5);
     padding: 10px;
     border-radius: 10px;
@@ -19,7 +19,7 @@ div {
     margin: 10px;
 }
 
-#bg  { 
+.bg  { 
     background: grey;
     padding: 0px;
     border-radius: 0px;
@@ -33,7 +33,7 @@ div {
     z-index: 0; 
 }
   
-#content { 
+.content { 
     position: relative; 
     z-index: 1; 
     padding: 0px;
@@ -60,4 +60,31 @@ div {
   /* opacity: 0.2;          optional, make it watermark-like */
   z-index: -1;          /* put behind other elements */
   pointer-events: none; /* so it won't block clicks */
+}
+
+.ops {
+  position: fixed;
+  bottom: 5px;
+  pointer-events: none;
+  visibility: visible;
+  transition: visibility 10s ease; 
+
+}
+
+.profile, .new {
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+  font-size: 1.2em;
+}
+
+.floatForm {
+  position: fixed;             /* stays on screen */
+  top: 50%; left: 50%;         /* anchor point in the middle */
+  transform: translate(-50%, -50%); /* pull back by half its size */
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #59c;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 1000;               /* stays above page content */
 }
